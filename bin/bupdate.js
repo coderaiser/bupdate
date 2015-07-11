@@ -65,6 +65,6 @@
     }
     
     function version() {
-        console.log('v' + require('../package'));
+        console.log('v' + require('../package').version);
     }
 })();
