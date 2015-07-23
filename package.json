@@ -2,7 +2,6 @@
   "name": "bupdate",
   "version": "1.0.2",
   "description": "update bower dependency",
-  "preferGlobal": true,
   "bin": {
     "bupdate": "bin/bupdate.js"
   },
