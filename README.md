@@ -1,6 +1,7 @@
 # Bupdate
 
 Update bower dependecy and change `bower.json` if version is bigger.
+
 For npm you could use [nupdate](https://github.com/coderaiser/nupdate "Nupdate").
 
 Same as:
