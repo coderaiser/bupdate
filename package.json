@@ -6,7 +6,7 @@
     "bupdate": "bin/bupdate.js"
   },
   "dependencies": {
-    "async": "~2.0.0-rc.1",
+    "async": "^2.0.0",
     "bower": "^1.7.0"
   },
   "devDependencies": {},
