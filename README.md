@@ -25,10 +25,14 @@ bupdate jquery
 ### Options
 
 ```
--v, --version   - show version number and exit
--h, --help      - show help and exit
+Usage: bupdate [options]
+Options:
+  -h, --help                  display this help and exit
+  -v, --version               display version and exit
+  -E, --save-exact            save exact version rather then semver
 ```
 
 ## License
 
 MIT
+

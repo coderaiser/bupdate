@@ -2,18 +2,19 @@
 
 'use strict';
 
-var argv    = process.argv.slice(2);
-var option  = argv[0];
-var saveExact;
+const argv    = process.argv.slice(2);
+const [name, option] = argv;
 
-if (!option || /^(-h|--help)$/.test(option))
-    help();
-else if (/^(-v|--version)$/.test(option))
-    version();
+let saveExact;
+
+if (!name || /^(-h|--help)$/.test(name))
+    return help();
+else if (/^(-v|--version)$/.test(name))
+    return version();
 else if (/^(-E|--save-exact)$/.test(option))
     saveExact = true;
-else 
-    bupdate(option);
+
+bupdate(name);
     
 function bupdate(name) {
     var bower   = require('bower'),
