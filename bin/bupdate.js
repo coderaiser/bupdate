@@ -2,21 +2,31 @@
 
 'use strict';
 
-const argv    = process.argv.slice(2);
-const [name, option] = argv;
+const argv  = process.argv.slice(2);
+const args = require('yargs-parser')(argv, {
+    boolean: [
+        'version',
+        'help',
+        'save-exact'
+    ],
+    alias: {
+        'v': 'version',
+        'h': 'help',
+        'E': 'save-exact'
+    }
+});
 
-let saveExact;
-
-if (!name || /^(-h|--help)$/.test(name))
+if (!argv.length || args.help)
     return help();
-else if (/^(-v|--version)$/.test(name))
+else if (args.version)
     return version();
-else if (/^(-E|--save-exact)$/.test(option))
-    saveExact = true;
-
-bupdate(name);
     
-function bupdate(name) {
+console.log(args);
+args._.forEach((name) => {
+    bupdate(name, {saveExact});
+});
+
+function bupdate(name, {saveExact}) {
     var bower   = require('bower'),
         async   = require('async');
     
