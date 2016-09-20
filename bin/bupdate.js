@@ -21,7 +21,8 @@ if (!argv.length || args.help)
 else if (args.version)
     return version();
     
-console.log(args);
+const {saveExact} = args;
+
 args._.forEach((name) => {
     bupdate(name, {saveExact});
 });
