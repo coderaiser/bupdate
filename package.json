@@ -1,6 +1,6 @@
 {
   "name": "bupdate",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "update bower dependency",
   "bin": {
     "bupdate": "bin/bupdate.js"
