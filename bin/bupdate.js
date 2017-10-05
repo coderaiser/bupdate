@@ -20,7 +20,7 @@ if (!argv.length || args.help)
     return help();
 else if (args.version)
     return version();
-    
+
 const {saveExact} = args;
 
 args._.forEach((name) => {
@@ -28,8 +28,8 @@ args._.forEach((name) => {
 });
 
 function bupdate(name, {saveExact}) {
-    var bower   = require('bower'),
-        async   = require('async');
+    var bower = require('bower');
+    var async = require('async');
     
     async.waterfall([
         function uninstall(callback) {
@@ -68,8 +68,8 @@ function bupdate(name, {saveExact}) {
 }
     
 function help() {
-    var bin         = require('../json/bin'),
-        usage       = 'Usage: bupdate [options]';
+    var bin = require('../json/bin');
+    var usage = 'Usage: bupdate [options]';
     
     console.log(usage);
     console.log('Options:');
@@ -82,3 +82,4 @@ function help() {
 function version() {
     console.log('v' + require('../package').version);
 }
+
